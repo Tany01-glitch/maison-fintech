@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Maison Money | Your Wealth, Thoughtfully Built</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+<body>
+<aside class="sidebar">
+  <a class="brand" href="#top"><span class="brand-mark">M</span><span>maison<span class="green">.</span><small>MONEY</small></span></a>
+  <div class="side-label">WORKSPACE</div>
+  <a class="side-link active" href="#top"><i>⌂</i> Overview</a>
+  <a class="side-link" href="#budget"><i>▤</i> Budget planner</a>
+  <a class="side-link" href="#transactions"><i>↕</i> Transactions</a>
+  <a class="side-link" href="#goals"><i>◎</i> Savings goals</a>
+  <div class="side-label learn-label">LEARN & GROW</div>
+  <a class="side-link" href="#saving"><i>✧</i> Saving strategies</a>
+  <a class="side-link" href="#invest"><i>↗</i> Investing guide</a>
+  <div class="sidebar-bottom"><div class="leaf">✦</div><b>Make progress<br>feel personal.</b><p>Small choices today. More freedom tomorrow.</p><a href="#goals">Set a goal ↗</a></div>
+</aside>
+<main class="main" id="top">
+<header class="topbar"><div><span class="eyebrow">YOUR PERSONAL FINANCE SPACE</span><h1>Good money habits look good on you.</h1></div><div class="top-actions"><span class="today" id="today"></span><button class="avatar" title="Your profile">MM</button></div></header>
+<section class="welcome"><div><span class="pill">✦ YOUR FINANCIAL DASHBOARD</span><h2>Build wealth with<br><em>intention.</em></h2><p>One clear view of your money, your goals, and the future you're creating.</p><a class="primary-btn" href="#budget">Plan this month <b>↗</b></a></div>
+<div class="hero-art" id="heroArt" tabindex="0" role="button" aria-label="Click to rotate the 3D emerald coin"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="coin3d"><span>₹</span></div><div class="glass-card"><small>YOUR NEXT CHAPTER</small><b>Worth investing in.</b><span>✦ &nbsp;Tap the coin</span></div><div class="spark s1">✧</div><div class="spark s2">✦</div></div></section>
+<section class="stats-grid">
+ <article class="stat-card"><div class="stat-top"><span>Monthly income</span><i>↗</i></div><strong id="incomeTotal">₹0</strong><small>From recorded transactions</small><div class="stat-icon">＋</div></article>
+ <article class="stat-card"><div class="stat-top"><span>Monthly expenses</span><i>↘</i></div><strong id="expenseTotal">₹0</strong><small>Keep spending intentional</small><div class="stat-icon">−</div></article>
+ <article class="stat-card dark-stat"><div class="stat-top"><span>Net balance</span><i>✦</i></div><strong id="balanceTotal">₹0</strong><small>Income minus expenses</small><div class="stat-icon">◈</div></article>
+</section>
+<section class="content-grid" id="budget">
+ <article class="panel budget-panel"><div class="panel-head"><div><span class="eyebrow">TAKE CONTROL</span><h3>Monthly budget</h3></div><span class="tag">SAVE YOUR PLAN</span></div>
+ <form id="budgetForm" class="form-grid"><label>Month<input type="month" name="month" id="budgetMonth" required></label><label>Income (₹)<input type="number" name="income" min="0" step="0.01" placeholder="35000" required></label><label>Needs & bills (₹)<input type="number" name="needs" min="0" step="0.01" placeholder="15000" required></label><label>Wants & lifestyle (₹)<input type="number" name="wants" min="0" step="0.01" placeholder="7000" required></label><label>EMIs / debt (₹)<input type="number" name="debt" min="0" step="0.01" placeholder="3000" required></label><button class="primary-btn full" type="submit">Save budget <b>↗</b></button></form>
+ <div class="budget-result"><div><small>Planned savings</small><strong id="plannedSavings">₹0</strong></div><div class="progress"><span id="budgetProgress"></span></div><small id="budgetHint">Save a budget to see your planned savings.</small></div></article>
+ <article class="panel quick-panel"><div class="panel-head"><div><span class="eyebrow">QUICK ACTION</span><h3>Add transaction</h3></div><span class="round-icon">＋</span></div>
+ <form id="transactionForm" class="stack-form"><label>Description<input name="title" maxlength="100" placeholder="e.g. Grocery shopping" required></label><div class="two-fields"><label>Amount (₹)<input name="amount" type="number" min="0.01" step="0.01" placeholder="850" required></label><label>Type<select name="kind"><option value="expense">Expense</option><option value="income">Income</option></select></label></div><div class="two-fields"><label>Category<select name="category"><option>Food</option><option>Transport</option><option>Shopping</option><option>Salary</option><option>Bills</option><option>Health</option><option>Education</option><option>Other</option></select></label><label>Date<input name="date" type="date" id="txnDate" required></label></div><button class="primary-btn full" type="submit">Add to ledger <b>↗</b></button></form></article>
+</section>
+<section class="panel table-panel" id="transactions"><div class="panel-head"><div><span class="eyebrow">YOUR MONEY MOVEMENT</span><h3>Recent transactions</h3></div><span class="tag">LATEST 8</span></div><div class="table-wrap"><table><thead><tr><th>DETAILS</th><th>CATEGORY</th><th>DATE</th><th>TYPE</th><th class="right">AMOUNT</th><th></th></tr></thead><tbody id="transactionRows"><tr><td colspan="6" class="empty">No transactions yet. Add your first one above.</td></tr></tbody></table></div></section>
+<section class="panel goals-panel" id="goals"><div class="panel-head"><div><span class="eyebrow">A FUTURE YOU CAN SEE</span><h3>Savings goals</h3></div><button class="secondary-btn" id="openGoal">＋ New goal</button></div><div id="goalGrid" class="goal-grid"><div class="empty">Create a goal to start tracking your progress.</div></div></section>
+<section class="learn-section" id="saving"><div class="section-title"><span class="eyebrow">A LITTLE WISDOM GOES A LONG WAY</span><h2>Money moves worth making.</h2></div><div class="learn-grid"><article class="learn-card"><span class="learn-number">01</span><h3>Automate your savings</h3><p>Move a realistic amount into savings as soon as income arrives. Consistency beats waiting for “whatever is left”.</p><a href="#budget">Build your budget ↗</a></article><article class="learn-card"><span class="learn-number">02</span><h3>Give impulse buys a pause</h3><p>Try a 24-hour pause for non-essential purchases. Revisit the decision when the excitement settles.</p><a href="#transactions">Review spending ↗</a></article><article class="learn-card"><span class="learn-number">03</span><h3>Build a safety cushion</h3><p>Work toward 3–6 months of essential expenses, adjusted to your personal circumstances.</p><a href="#goals">Set an emergency goal ↗</a></article></div></section>
+<section class="invest-section" id="invest"><div class="section-title"><span class="eyebrow">LEARN BEFORE YOU LEAP</span><h2>Investing, in plain language.</h2><p>Understand the basics and risk before choosing a product.</p></div><div class="resource-grid"><a href="https://investor.sebi.gov.in/" target="_blank" rel="noopener" class="resource"><span>SEBI</span><b>Investor education</b><small>Understand markets, risk and investor rights ↗</small></a><a href="https://www.amfiindia.com/investor-corner" target="_blank" rel="noopener" class="resource"><span>AMFI</span><b>Mutual fund basics</b><small>Learn how mutual funds work ↗</small></a><a href="https://www.rbi.org.in/" target="_blank" rel="noopener" class="resource"><span>RBI</span><b>Financial awareness</b><small>Explore banking and money resources ↗</small></a></div></section>
+<footer>MAISON<span class="green">.</span>MONEY <small>Clarity for today. Confidence for tomorrow.</small><p>Educational use only — not financial, investment, tax or legal advice. Investments carry risk, including loss of principal.</p></footer>
+</main>
+<div class="modal-backdrop" id="goalModal"><div class="modal"><button class="modal-close" id="closeGoal">×</button><span class="eyebrow">MAKE IT REAL</span><h3>Create a savings goal</h3><form id="goalForm" class="stack-form"><label>Goal name<input name="title" placeholder="e.g. New laptop" required maxlength="100"></label><label>Target amount (₹)<input name="target" type="number" min="1" step="0.01" placeholder="60000" required></label><label>Already saved (₹)<input name="saved" type="number" min="0" step="0.01" value="0"></label><button class="primary-btn full">Create goal ↗</button></form></div></div>
+<div class="toast" id="toast"></div>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+<script src="/static/app.js"></script>
+</body></html>

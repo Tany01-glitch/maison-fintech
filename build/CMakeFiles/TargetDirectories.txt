@@ -1,0 +1,3 @@
+C:/Users/tanis/Downloads/maison_money_cpp_fullstack/maison_money_cpp/build/CMakeFiles/maison_money.dir
+C:/Users/tanis/Downloads/maison_money_cpp_fullstack/maison_money_cpp/build/CMakeFiles/edit_cache.dir
+C:/Users/tanis/Downloads/maison_money_cpp_fullstack/maison_money_cpp/build/CMakeFiles/rebuild_cache.dir
