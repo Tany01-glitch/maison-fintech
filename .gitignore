@@ -1,0 +1,17 @@
+node_modules/
+frontend/node_modules/
+frontend/dist/
+build/
+maison_money
+maison_money.exe
+.env
+.env.*
+!.env.example
+__pycache__/
+.venv/
+venv/
+*.log
+.DS_Store
+Thumbs.db
+/build/
+/instance/
